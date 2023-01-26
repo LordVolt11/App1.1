@@ -1,0 +1,50 @@
+{
+    "coord":
+    {
+        "lon":50,
+        "lat":50
+    },
+    "weather":
+    [
+        {
+            "id":803,
+            "main":"Clouds",
+            "description":"broken clouds",
+            "icon":"04d"
+        }
+    ],
+    "base":"stations",
+    "main":
+    {
+        "temp":268.72,
+        "feels_like":263.71,
+        "temp_min":268.72,
+        "temp_max":268.72,
+        "pressure":1047,
+        "humidity":71,
+        "sea_level":1047,
+        "grnd_level":1047
+    },
+    "visibility":10000,
+    "wind":
+    {
+        "speed":3.66,
+        "deg":118,
+        "gust":8.21
+    },
+    "clouds":
+    {
+        "all":73
+    },
+    "dt":1674371923,
+    "sys":
+    {
+        "country":"KZ",
+        "sunrise":1674361602,
+        "sunset":1674393348
+    },
+    "timezone":18000,
+    "id":607847,
+    "name":"West Kazakhstan",
+    "cod":200
+}
