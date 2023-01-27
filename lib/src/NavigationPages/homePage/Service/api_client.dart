@@ -5,16 +5,17 @@ import '../Model/aqiModel.dart';
 import '../Model/weatherModel.dart';
 
 class ApiClient {
-  Future<Aqi>? getCurrentAqi(String? lat, String? lon) async {
+  Future<String> getCurrentAqi(String? lat, String? lon) async {
     var endpoint = Uri.parse(
         // "https://nominatim.openstreetmap.org/search?q=Alipur,%20Delhi&format=json");
         "http://api.openweathermap.org/data/2.5/air_pollution?lat=50&lon=50&appid=e4b5539432a7fcdfc3babb8dc0a53765");
     var response = await http.get(endpoint);
     var body = jsonDecode(response.body);
-    Aqi dataAqi = Aqi.fromJson(body);
-    print(Aqi.fromJson(body).pm2_5);
+    // Aqi dataAqi = Aqi.fromJson(body);
+    // print(Aqi.fromJson(body).pm2_5);
+    print(body);
 
-    return Aqi.fromJson(body);
+    return body['list'][0]['main']['aqi'].toString();
   }
 
   Future<Weather>? getCurrentWeather(String? lat, String? lon) async {
